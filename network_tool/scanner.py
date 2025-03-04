@@ -14,7 +14,7 @@ def port_scan(target):
     open_ports = []
     print(f"\n[🔍] Scanning {target} for open ports...\n")
 
-    for port in range(1, 1025):
+    for port in range(1, 65537):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(0.5)
         result = sock.connect_ex((target, port))
